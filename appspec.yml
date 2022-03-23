@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+  - source: index.js
+    destination: /root/testBlog
+hooks:
+  BeforeInstall:
+    - location: scripts/BeforeInstall.sh
+      timeout: 300
+  AfterInstall:
+    - location: scripts/AfterInstall.sh
+      timeout: 300
